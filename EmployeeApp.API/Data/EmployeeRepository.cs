@@ -37,10 +37,18 @@ namespace EmployeeApp.API.Data
             var employee = await _context.Employees.Where(p => p.First_name.Contains(name.Trim()) || p.Last_name.Contains(name.Trim())).ToListAsync();
             return employee;
         }
-        public async Task<IEnumerable<Employee>> GetEmployee(DateTime FromDate,DateTime ToDate)
+        public async Task<IEnumerable<Employee>> GetEmployee(DateTime FromDate,DateTime ToDate, string name)
         {
-            var employee = await _context.Employees.Where(x => x.employment_start_date >= FromDate).Where(x => x.employment_end_date <= ToDate).ToListAsync();
-            return employee;
+            if (FromDate == DateTime.MinValue)
+            {
+               return await _context.Employees.Where(p => p.First_name.Contains(name.Trim()) || p.Last_name.Contains(name.Trim())).ToListAsync();
+            }
+            else
+            {
+                return await _context.Employees.Where(p => (name == null || p.First_name.Contains(name.Trim()) || p.Last_name.Contains(name.Trim()))).
+                                                Where(x => x.employment_start_date >= FromDate).Where(x => x.employment_end_date <= ToDate).ToListAsync();
+            }
+            
         }
         public async Task<IEnumerable<Employee>> GetEmployees()
         {

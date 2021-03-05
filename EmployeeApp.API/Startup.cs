@@ -62,6 +62,7 @@ namespace EmployeeApp.API
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x=> x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseRouting();
 
             app.UseAuthorization();

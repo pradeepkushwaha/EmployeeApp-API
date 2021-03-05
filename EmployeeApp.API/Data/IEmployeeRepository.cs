@@ -16,7 +16,7 @@ namespace EmployeeApp.API.Data
         Task<Employee> GetEmployee(int id);
 
         Task<IEnumerable<Employee>> GetEmployee(string name);
-        Task<IEnumerable<Employee>> GetEmployee(DateTime FromDate, DateTime ToDate);
+        Task<IEnumerable<Employee>> GetEmployee(DateTime FromDate, DateTime ToDate, string name);
 
     }
 }

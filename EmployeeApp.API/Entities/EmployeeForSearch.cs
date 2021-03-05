@@ -7,8 +7,14 @@ namespace EmployeeApp.API.Entities
 {
     public class EmployeeForSearch
     {
+
+        public string username { get; set; }
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
-        
+    }
+    public class EmploymentDate
+    {
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
     }
 }

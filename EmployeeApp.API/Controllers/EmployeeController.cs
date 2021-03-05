@@ -60,11 +60,10 @@ namespace EmployeeApp.API.Controllers
                 return NotFound();
             return Ok(employeeToReturn);
         }
-        [HttpGet("SearchEmployee")]
-        public async Task<IActionResult> SearchEmployee(DateTime FromDate, DateTime ToDate)
+        [HttpPost("SearchEmployee")]
+        public async Task<IActionResult> SearchEmployee(EmployeeForSearch employeeForSearch)
         {
-           
-            var employee = await _repo.GetEmployee(FromDate,ToDate);
+            var employee = await _repo.GetEmployee(employeeForSearch.FromDate, employeeForSearch.ToDate, employeeForSearch.username);
 
             var employeeToReturn = _mapper.Map<IEnumerable<EmployeeForListEntity>>(employee);
 
@@ -72,6 +71,7 @@ namespace EmployeeApp.API.Controllers
                 return NotFound();
             return Ok(employeeToReturn);
         }
+         
         // POST api/<EmployeeController>
         [HttpPost]
         public void Post([FromBody] string value)
