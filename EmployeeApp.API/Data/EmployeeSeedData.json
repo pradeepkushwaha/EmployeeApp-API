@@ -1,0 +1,54 @@
+[
+  {
+    "First_name": "edward",
+    "Last_name": "wind",
+    "Job_title": "Solution architect",
+    "employment_start_date": "2017-08-02",
+    "employment_end_date": "2020-09-02",
+    "Created": "2017-08-02",
+    "Department": "IT",
+    "Email": "edward@gmail.com",
+    "Gender": "male",
+    "City": "NOIDA",
+    "DateOfBirth": "1984-02-19"
+  },
+  {
+    "First_name": "James",
+    "Last_name": "smith",
+    "Job_title": "Technical architect",
+    "employment_start_date": "2018-03-02",
+    "employment_end_date": "2021-09-02",
+    "Created": "2018-03-02",
+    "Department": "IT",
+    "Email": "James@gmail.com",
+    "Gender": "male",
+    "City": "NOIDA",
+    "DateOfBirth": "1982-02-19"
+  },
+  {
+    "First_name": "Selina",
+    "Last_name": "Chun",
+    "Job_title": "Business Analyst",
+    "employment_start_date": "2019-03-02",
+    "employment_end_date": "2021-09-02",
+    "Created": "2019-03-02",
+    "Department": "IT",
+    "Email": "Selina@gmail.com",
+    "Gender": "female",
+    "City": "Delhi",
+    "DateOfBirth": "1986-02-18"
+  },
+  {
+    "First_name": "Tracie",
+    "Last_name": "Chun",
+    "Job_title": "Business Analyst",
+    "employment_start_date": "2017-03-02",
+    "employment_end_date": "2021-09-02",
+    "Created": "2017-03-02",
+    "Department": "IT",
+    "Email": "Tracie@gmail.com",
+    "Gender": "female",
+    "City": "NOIDA",
+    "DateOfBirth": "1988-02-18"
+  }
+]
